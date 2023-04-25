@@ -253,7 +253,6 @@ interface IERC20Metadata is IERC20 {
 
 pragma solidity ^0.8.0;
 
-
 /**
  * @dev Implementation of the {IERC20} interface.
  *
@@ -608,7 +607,6 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
 
 pragma solidity ^0.8.0;
 
-
 contract SCREAMToken is Ownable, ERC20 {
     bool public limited;
     uint256 public maxHoldingAmount;
@@ -616,7 +614,7 @@ contract SCREAMToken is Ownable, ERC20 {
     address public uniswapV2Pair;
     mapping(address => bool) public blacklists;
 
-    constructor(uint256 _totalSupply) ERC20("Shitcoins Rule Everything Around Me", "SCREAM") {
+    constructor(uint256 _totalSupply) ERC20("S.C.R.E.A.M", "SCREAM") {
         _mint(msg.sender, _totalSupply);
     }
 
